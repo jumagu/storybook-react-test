@@ -44,3 +44,10 @@ export const CustomColor: Story = {
     customColor: "cyan",
   },
 };
+
+export const CustomBgColor: Story = {
+  args: {
+    name: "hola mundo",
+    backgroundColor: "yellow"
+  },
+};

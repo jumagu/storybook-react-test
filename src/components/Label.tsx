@@ -18,9 +18,13 @@ interface LabelProps {
    */
   color?: "text-primary" | "text-secondary" | "text-tertiary";
   /**
-   * What custom color to use
+   * What custom font color to use
    */
   customColor?: string;
+  /**
+   * What background color to use
+   */
+  backgroundColor?: string;
 }
 
 export const Label = ({
@@ -29,6 +33,7 @@ export const Label = ({
   capitalize = false,
   color,
   customColor,
+  backgroundColor = "transparent",
 }: LabelProps) => {
   return (
     <span
@@ -36,6 +41,7 @@ export const Label = ({
       style={{
         color: customColor,
         textTransform: capitalize ? "capitalize" : "unset",
+        backgroundColor,
       }}
     >
       {name}
